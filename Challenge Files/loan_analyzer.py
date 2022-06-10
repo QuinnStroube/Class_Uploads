@@ -26,8 +26,13 @@ print("There are",len(loan_costs),"loans in the list.")                     #Pri
 # # @TODO: Use the `sum` function to calculate the total of all loans in the list.
 # # Print the total value of the loans
 # # YOUR CODE HERE!
+loan_total = 0.00
+def sum_of_loans(loan_costs):
 
-sum(loan_costs(0))
+    for loan in loan_costs:
+        loan_total += loan
+    return loan_total
+print("The total value of the loans is", sum_of_loans(loan_costs), round(loan_total,2))
 
 # # What is the average loan amount from the list?
 # # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
