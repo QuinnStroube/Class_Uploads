@@ -1,52 +1,52 @@
-# coding: utf-8
+# # coding: utf-8
 import csv
 from pathlib import Path
 
-# """Part 1: Automate the Calculations.
+# # """Part 1: Automate the Calculations.
 
-# Automate the calculations for the loan portfolio summaries.
+# # Automate the calculations for the loan portfolio summaries.
 
-# First, let's start with some calculations on a list of prices for 5 loans.
-#     1. Use the `len` function to calculate the total number of loans in the list.
-#     2. Use the `sum` function to calculate the total of all loans in the list.
-#     3. Using the sum of all loans and the total number of loans, calculate the average loan price.
-#     4. Print all calculations with descriptive messages.
-# """
-loan_costs = [500, 600, 200, 1000, 450]
+# # First, let's start with some calculations on a list of prices for 5 loans.
+# #     1. Use the `len` function to calculate the total number of loans in the list.
+# #     2. Use the `sum` function to calculate the total of all loans in the list.
+# #     3. Using the sum of all loans and the total number of loans, calculate the average loan price.
+# #     4. Print all calculations with descriptive messages.
+# # """
+# loan_costs = [500, 600, 200, 1000, 450]
 
-# # How many loans are in the list?
-# # @TODO: Use the `len` function to calculate the total number of loans in the list.
-# # Print the number of loans from the list
-# # YOUR CODE HERE!
+# # # How many loans are in the list?
+# # # @TODO: Use the `len` function to calculate the total number of loans in the list.
+# # # Print the number of loans from the list
+# # # YOUR CODE HERE!
 
-len(loan_costs)                                                               ##Calculate number of loans in list
-print("There are",len(loan_costs),"loans in the list.")                       ##Print number of loans in list
+# len(loan_costs)                                                               ##Calculate number of loans in list
+# print("There are",len(loan_costs),"loans in the list.")                       ##Print number of loans in list
 
-# # What is the total of all loans?
-# # @TODO: Use the `sum` function to calculate the total of all loans in the list.
-# # Print the total value of the loans
-# # YOUR CODE HERE!
+# # # What is the total of all loans?
+# # # @TODO: Use the `sum` function to calculate the total of all loans in the list.
+# # # Print the total value of the loans
+# # # YOUR CODE HERE!
 
-def sum_of_loans(loan_amount):                                                  #Define the function to sum the loans
-    loan_totals = sum(loan_amount)                                              #Create a variable for total of loans using sum function
+# def sum_of_loans(loan_amount):                                                  #Define the function to sum the loans
+#     loan_totals = sum(loan_amount)                                              #Create a variable for total of loans using sum function
     
-    return loan_totals                                                          #Return the value of the loans
+#     return loan_totals                                                          #Return the value of the loans
 
-total_loan_amount = sum_of_loans(loan_costs)                                    #ASK ABOUT THIS
-print(f"The total of all the loans is ${total_loan_amount: .2f}")               #Print total loan amount using f string rounded to 2 decimals
+# total_loan_amount = sum_of_loans(loan_costs)                                    #ASK ABOUT THIS
+# print(f"The total of all the loans is ${total_loan_amount: .2f}")               #Print total loan amount using f string rounded to 2 decimals
 
 
-# # What is the average loan amount from the list?
-# # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
-# # Print the average loan amount
-# # YOUR CODE HERE!
+# # # What is the average loan amount from the list?
+# # # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
+# # # Print the average loan amount
+# # # YOUR CODE HERE!
 
-def average_loan(loan_amount):
-    average = total_loan_amount/len(loan_costs)
+# def average_loan(loan_amount):
+#     average = total_loan_amount/len(loan_costs)
 
-    return average
-loan_average = average_loan(loan_costs)
-print(f"The average loan amount is ${loan_average: .2f}")
+#     return average
+# loan_average = average_loan(loan_costs)
+# print(f"The average loan amount is ${loan_average: .2f}")
 
 # """Part 2: Analyze Loan Data.
 
@@ -96,12 +96,12 @@ print("There are",loan.get("remaining_months"),"months remaining on the loan")
 
 # # YOUR CODE HERE!
 
-def pv_of_loan(loan_amount):
-    present_value = "future_value" / (1 + .20/12) ** ("remaining_months")
-
+def pv_of_loan(future_value, remaining_months):
+    present_value = future_value / (1 + .20/12) ** remaining_months
+    print("pv",present_value)
     return present_value
 
-present_value_loan = pv_of_loan(loan)
+present_value_loan = pv_of_loan(loan["future_value"],loan["remaining_months"])
 print(present_value_loan)
 
 # # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
