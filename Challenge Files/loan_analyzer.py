@@ -138,20 +138,20 @@ new_loan = {
 # #    This function should include parameters for `future_value`, `remaining_months`, and the `annual_discount_rate`
 # #    The function should return the `present_value` for the loan.
 # # YOUR CODE HERE!
-new_loan["annual_discount_rate"] = .2
-def calculate_present_value(future_value,remaining_months,annual_discount_rate):
-    present_value = future_value / (1 + annual_discount_rate/12) ** remaining_months
-    print("PV",present_value)
-    return present_value
 
-pv_loan = calculate_present_value(new_loan["future_value"],new_loan["remaining_months"],new_loan["annual_discount_rate"])
-print(f"The present value of the loan is: {pv_loan: .2f}")
+def calculate_present_value(future_value,remaining_months,annual_discount_rate):                    #Define the function to calculate pv using the three parameters
+    present_value = future_value / (1 + annual_discount_rate/12) ** remaining_months                #Create variable to calculate pv
+    #print("PV",present_value)                                                                      #Optional print to check calculation
+    return present_value                                                                            #Return function which returns the calculated pv
+
 
 # # @TODO: Use the function to calculate the present value of the new loan given below.
 # #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
 # # YOUR CODE HERE!
 
-
+new_loan["annual_discount_rate"] = .2
+pv_loan = calculate_present_value(new_loan["future_value"],new_loan["remaining_months"],new_loan["annual_discount_rate"])
+print(f"The present value of the loan is: ${pv_loan: .2f}")
 
 # """Part 4: Conditionally filter lists of loans.
 
@@ -164,38 +164,42 @@ print(f"The present value of the loan is: {pv_loan: .2f}")
 # 3. Print the list of inexpensive_loans.
 # """
 
-# loans = [
-#     {
-#         "loan_price": 700,
-#         "remaining_months": 9,
-#         "repayment_interval": "monthly",
-#         "future_value": 1000,
-#     },
-#     {
-#         "loan_price": 500,
-#         "remaining_months": 13,
-#         "repayment_interval": "bullet",
-#         "future_value": 1000,
-#     },
-#     {
-#         "loan_price": 200,
-#         "remaining_months": 16,
-#         "repayment_interval": "bullet",
-#         "future_value": 1000,
-#     },
-#     {
-#         "loan_price": 900,
-#         "remaining_months": 16,
-#         "repayment_interval": "bullet",
-#         "future_value": 1000,
-#     },
-# ]
+loans = [
+    {
+        "loan_price": 700,
+        "remaining_months": 9,
+        "repayment_interval": "monthly",
+        "future_value": 1000,
+    },
+    {
+        "loan_price": 500,
+        "remaining_months": 13,
+        "repayment_interval": "bullet",
+        "future_value": 1000,
+    },
+    {
+        "loan_price": 200,
+        "remaining_months": 16,
+        "repayment_interval": "bullet",
+        "future_value": 1000,
+    },
+    {
+        "loan_price": 900,
+        "remaining_months": 16,
+        "repayment_interval": "bullet",
+        "future_value": 1000,
+    },
+]
 
 # # @TODO: Create an empty list called `inexpensive_loans`
 # # YOUR CODE HERE!
 
+inexpensive_loans = []
+
 # # @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list
 # # YOUR CODE HERE!
+
+for loans in loans
 
 # # @TODO: Print the `inexpensive_loans` list
 # # YOUR CODE HERE!
