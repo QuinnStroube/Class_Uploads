@@ -2,16 +2,16 @@
 import csv
 from pathlib import Path
 
-"""Part 1: Automate the Calculations.
+# """Part 1: Automate the Calculations.
 
-Automate the calculations for the loan portfolio summaries.
+# Automate the calculations for the loan portfolio summaries.
 
-First, let's start with some calculations on a list of prices for 5 loans.
-    1. Use the `len` function to calculate the total number of loans in the list.
-    2. Use the `sum` function to calculate the total of all loans in the list.
-    3. Using the sum of all loans and the total number of loans, calculate the average loan price.
-    4. Print all calculations with descriptive messages.
-"""
+# First, let's start with some calculations on a list of prices for 5 loans.
+#     1. Use the `len` function to calculate the total number of loans in the list.
+#     2. Use the `sum` function to calculate the total of all loans in the list.
+#     3. Using the sum of all loans and the total number of loans, calculate the average loan price.
+#     4. Print all calculations with descriptive messages.
+# """
 loan_costs = [500, 600, 200, 1000, 450]
 
 # # How many loans are in the list?
@@ -19,25 +19,31 @@ loan_costs = [500, 600, 200, 1000, 450]
 # # Print the number of loans from the list
 # # YOUR CODE HERE!
 
-len(loan_costs)                                                             #Calculate number of loans in list
-print("There are",len(loan_costs),"loans in the list.")                     #Print number of loans in list
+len(loan_costs)                                                               ##Calculate number of loans in list
+print("There are",len(loan_costs),"loans in the list.")                       ##Print number of loans in list
 
 # # What is the total of all loans?
 # # @TODO: Use the `sum` function to calculate the total of all loans in the list.
 # # Print the total value of the loans
 # # YOUR CODE HERE!
-loan_total = 0.00
-def sum_of_loans(loan_costs):
 
-    for loan in loan_costs:
-        loan_total += loan
-    return loan_total
-print("The total value of the loans is", sum_of_loans(loan_costs), round(loan_total,2))
+def sum_of_loans(loan_amount):                                                  #Define the function to sum the loans
+    loan_totals = sum(loan_amount)                                              #Create a variable for total of loans using sum function
+    
+    return loan_totals                                                          #Return the value of the loans
+
+total_loan_amount = sum_of_loans(loan_costs)                                    #ASK ABOUT THIS
+print(f"The total of all the loans is ${total_loan_amount: .2f}")               #Print total loan amount using f string rounded to 2 decimals
+
 
 # # What is the average loan amount from the list?
 # # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
 # # Print the average loan amount
 # # YOUR CODE HERE!
+
+def average_loan(loan_amount):
+    average = 
+
 
 # """Part 2: Analyze Loan Data.
 
