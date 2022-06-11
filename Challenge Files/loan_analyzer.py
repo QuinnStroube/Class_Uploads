@@ -42,8 +42,11 @@ print(f"The total of all the loans is ${total_loan_amount: .2f}")               
 # # YOUR CODE HERE!
 
 def average_loan(loan_amount):
-    average = 
+    average = total_loan_amount/len(loan_costs)
 
+    return average
+loan_average = average_loan(loan_costs)
+print(f"The average loan amount is ${loan_average: .2f}")
 
 # """Part 2: Analyze Loan Data.
 
