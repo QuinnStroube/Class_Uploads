@@ -202,7 +202,7 @@ inexpensive_loans = []
 for loan_amount in loans[:]:
     loan_price = loan_amount.get("loan_price")
     if loan_price <= 500:  
-        inexpensive_loans.append(loan_price)
+        inexpensive_loans.append(loan_price) 
 
 # # @TODO: Print the `inexpensive_loans` list
 # # YOUR CODE HERE!
